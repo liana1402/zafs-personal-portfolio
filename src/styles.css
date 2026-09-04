@@ -1,0 +1,32 @@
+
+@import "tailwindcss";
+
+@theme {
+  --color-light-green: #A3B18A;
+  --color-custom-black: #1B1B1B;
+  --color-custom-white: #EFF1ED;
+  --color-dark-green: #484527;
+  --height-body-height: calc(100vh - 50px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: --body-height;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-light-green);
+  place-items: center;
+}
+
+.material-symbols-outlined{
+    font-size: revert-layer;
+    display: revert-layer;
+}
