@@ -6,9 +6,17 @@ type ProjectCardProps = {
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
+    const image = project.images?.[0]
+
     return (
-        <Link to={"/projects/$projectCat/$projectId"} params={{ projectCat: project.projectCat, projectId: project.id }} className="w-40 lg:w-70 aspect-square items-center text-center bg-custom-white rounded-lg">
-            {project.title}
+        <Link
+            to={"/projects/$projectCat/$projectId"}
+            params={{ projectCat: project.projectCat, projectId: project.id }}
+            className="flex w-40 lg:w-70 aspect-square object-cover items-center justify-center text-center rounded-lg bg-custom-white bg-center bg-cover hover:scale-105 transition-transform duration-300 ease-in-out"
+            style={{
+                backgroundImage: image ? `url(${image})` : undefined,
+            }}>
+            {image ? '' : project.title}
         </Link>
     )
 }

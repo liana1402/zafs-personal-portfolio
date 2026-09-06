@@ -12,7 +12,7 @@ function CustomLink ({ label, href, external = false, params, icon }: LinkProps)
     const className = "text-custom-black hover:text-custom-white transition-colors duration-200 ease-in-out"
     const content = icon ? (
       <>
-          <span className="material-symbols-outlined text-4xl md:hidden" aria-hidden="true">{icon}</span>
+          <span className="material-symbols-outlined text-3xl md:hidden" aria-hidden="true">{icon}</span>
           <span className="hidden md:inline">{label}</span>
       </>
     ) : label
